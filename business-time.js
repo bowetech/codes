@@ -15,7 +15,8 @@ function getTodayStatus(business_hours) {
 	let date = new Date();
 	let currentDay = date.getDay();
 	let value = false;
-
+	currentDay = (currentDay == 0) ? 7 : currentDay
+	
 	business_hours.map((workTime) => {
 		const {
 			weekday_id,
